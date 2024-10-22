@@ -1,7 +1,7 @@
 
 class SizeConfig {
-  static const double desktop = 990;
-  static const double tablet = 767;
+  static const double desktop = 992;
+  static const double tablet = 768;
 
   // static late double width,height;             |
   //                                              |
