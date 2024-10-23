@@ -5,6 +5,7 @@ abstract class AppStyles{
     return const TextStyle(
       fontSize: 16,
       fontWeight: FontWeight.w400,
+      color: Colors.white
     );
   }
   static TextStyle style28Medium(context){
