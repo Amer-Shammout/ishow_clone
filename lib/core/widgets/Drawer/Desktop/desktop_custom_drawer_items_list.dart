@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:ishow_clone/core/widgets/Drawer/Common/custom_drawer_item.dart';
+import 'package:ishow_clone/core/widgets/Drawer/Common/common_custom_drawer_item.dart';
 import 'package:ishow_clone/core/models/custom_drawer_item_model.dart';
 import 'package:ishow_clone/core/utils/app_images.dart';
+import 'package:ishow_clone/core/widgets/Drawer/variables.dart';
 
-class CustomDrawerItemsList extends StatefulWidget {
-  const CustomDrawerItemsList({
+class DesktopCustomDrawerItemsList extends StatefulWidget {
+  const DesktopCustomDrawerItemsList({
     super.key,
   });
 
   @override
-  State<CustomDrawerItemsList> createState() => _CustomDrawerItemsListState();
+  State<DesktopCustomDrawerItemsList> createState() =>
+      _DesktopCustomDrawerItemsListState();
 }
 
-class _CustomDrawerItemsListState extends State<CustomDrawerItemsList> {
+class _DesktopCustomDrawerItemsListState
+    extends State<DesktopCustomDrawerItemsList> {
   final List<CustomDrawerItemModel> items = const [
     CustomDrawerItemModel(
       image: Assets.imagesHome,
@@ -47,18 +50,20 @@ class _CustomDrawerItemsListState extends State<CustomDrawerItemsList> {
       title: 'Logout',
     ),
   ];
-  int currentIndex = 0;
+  // int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: List.generate(items.length, (index) {
-        return CustomDrawerItem(
+        return CommonCustomDrawerItem(
           customDrawerItemModel: items[index],
           isActive: currentIndex == index,
           onPressed: () {
-            setState(() {
-              currentIndex = index;
-            });
+            setState(
+              () {
+                currentIndex = index;
+              },
+            );
           },
         );
       }),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ishow_clone/core/widgets/Drawer/Common/custom_drawer_items_list.dart';
+import 'package:ishow_clone/core/widgets/Drawer/Desktop/desktop_custom_drawer_items_list.dart';
 import 'package:ishow_clone/core/widgets/Drawer/Common/gift_dialog.dart';
 import 'package:ishow_clone/core/widgets/Drawer/Common/user_profile_tile.dart';
 import 'package:ishow_clone/constants.dart';
@@ -52,7 +52,7 @@ class DesktopCustomDrawer extends StatelessWidget {
             ),
           ),
           const SliverToBoxAdapter(
-            child: CustomDrawerItemsList(),
+            child: DesktopCustomDrawerItemsList(),
           ),
           const SliverToBoxAdapter(
             child: SizedBox(

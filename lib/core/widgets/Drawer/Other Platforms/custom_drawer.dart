@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ishow_clone/constants.dart';
 import 'package:ishow_clone/core/utils/app_images.dart';
-import 'package:ishow_clone/core/widgets/Drawer/Common/custom_drawer_items_list.dart';
 import 'package:ishow_clone/core/widgets/Drawer/Common/gift_dialog.dart';
 import 'package:ishow_clone/core/widgets/Drawer/Common/user_profile_tile.dart';
+import 'package:ishow_clone/core/widgets/Drawer/Other%20Platforms/custom_drawer_items_list.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -57,9 +57,7 @@ class CustomDrawer extends StatelessWidget {
               height: 24,
             ),
           ),
-          SliverFillRemaining(
-            child: ReorderableListView.builder(physics: NeverScrollableScrollPhysics(),itemCount: 5, onReorder: (index,index2){},itemBuilder: (context, index) => Text("Hello",),),
-          )
+         
         ],
       ),
     );

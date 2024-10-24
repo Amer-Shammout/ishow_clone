@@ -1,6 +1,6 @@
 class CustomDrawerItemModel {
-  final String image;
+  final String? image;
   final String title;
 
-  const CustomDrawerItemModel({required this.image, required this.title});
+  const CustomDrawerItemModel({this.image, required this.title});
 }

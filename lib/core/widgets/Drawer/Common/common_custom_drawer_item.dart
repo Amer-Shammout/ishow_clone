@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:ishow_clone/core/models/custom_drawer_item_model.dart';
 import 'package:ishow_clone/core/utils/app_styles.dart';
 
-class CustomDrawerItem extends StatelessWidget {
-  const CustomDrawerItem(
+class CommonCustomDrawerItem extends StatelessWidget {
+  const CommonCustomDrawerItem(
       {super.key,
       required this.onPressed,
       required this.isActive,
@@ -21,7 +21,7 @@ class CustomDrawerItem extends StatelessWidget {
       onPressed: onPressed,
       height: 60,
       color: isActive
-          ? Color(
+          ? const Color(
               0xff253d50,
             )
           : Colors.transparent,
@@ -31,12 +31,12 @@ class CustomDrawerItem extends StatelessWidget {
           customDrawerItemModel.title == 'Logout'
               ? SvgPicture.asset(
                 color: Colors.white,
-                  customDrawerItemModel.image,
+                  customDrawerItemModel.image!,
                   width: 24,
                   height: 20,
                 )
               : Image.asset(
-                  customDrawerItemModel.image,
+                  customDrawerItemModel.image!,
                   width: 24,
                   height: 24,
                 ),
