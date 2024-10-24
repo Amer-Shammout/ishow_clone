@@ -70,6 +70,10 @@ class Assets {
   /// assets/images/Ishow_Logo.png
   static const String imagesIshowLogo = "assets/images/Ishow_Logo.png";
 
+  /// Assets for imagesLeftArrow
+  /// assets/images/left_arrow.svg
+  static const String imagesLeftArrow = "assets/images/left_arrow.svg";
+
   /// Assets for imagesLogout
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
@@ -85,6 +89,10 @@ class Assets {
   /// Assets for imagesPresons
   /// assets/images/presons.png
   static const String imagesPresons = "assets/images/presons.png";
+
+  /// Assets for imagesRightArrow
+  /// assets/images/right_arrow.svg
+  static const String imagesRightArrow = "assets/images/right_arrow.svg";
 
   /// Assets for imagesSearch
   /// assets/images/search.svg

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/banners_page_view.dart';
 import 'package:ishow_clone/core/widgets/App%20Bar/Other%20Platforms/custom_app_bar.dart';
 
 class HomeTabletLayout extends StatelessWidget {
@@ -6,9 +7,18 @@ class HomeTabletLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         CustomAppBar(),
+        Expanded(
+          child: CustomScrollView(
+            slivers: [
+              SliverToBoxAdapter(
+                child: BannersPageView(),
+              )
+            ],
+          ),
+        ),
       ],
     );
   }
