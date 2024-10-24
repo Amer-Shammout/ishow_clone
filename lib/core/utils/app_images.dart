@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAvatar
+  /// assets/images/avatar.png
+  static const String imagesAvatar = "assets/images/avatar.png";
+
   /// Assets for imagesBanner1
   /// assets/images/banner_1.png
   static const String imagesBanner1 = "assets/images/banner_1.png";
@@ -22,17 +26,53 @@ class Assets {
   /// assets/images/banner_5.png
   static const String imagesBanner5 = "assets/images/banner_5.png";
 
+  /// Assets for imagesCamera
+  /// assets/images/camera.png
+  static const String imagesCamera = "assets/images/camera.png";
+
+  /// Assets for imagesContent
+  /// assets/images/content.png
+  static const String imagesContent = "assets/images/content.png";
+
+  /// Assets for imagesDrawerLogo
+  /// assets/images/drawer_logo.png
+  static const String imagesDrawerLogo = "assets/images/drawer_logo.png";
+
+  /// Assets for imagesFavourite
+  /// assets/images/favourite.png
+  static const String imagesFavourite = "assets/images/favourite.png";
+
+  /// Assets for imagesFeedback
+  /// assets/images/feedback.png
+  static const String imagesFeedback = "assets/images/feedback.png";
+
+  /// Assets for imagesGift
+  /// assets/images/gift.png
+  static const String imagesGift = "assets/images/gift.png";
+
+  /// Assets for imagesGiftProgressIndicatorItem
+  /// assets/images/gift_progress_indicator_item.png
+  static const String imagesGiftProgressIndicatorItem = "assets/images/gift_progress_indicator_item.png";
+
+  /// Assets for imagesHistory
+  /// assets/images/history.png
+  static const String imagesHistory = "assets/images/history.png";
+
+  /// Assets for imagesHome
+  /// assets/images/home.png
+  static const String imagesHome = "assets/images/home.png";
+
   /// Assets for imagesHot
   /// assets/images/hot.png
   static const String imagesHot = "assets/images/hot.png";
 
-  /// Assets for imagesLogo
-  /// assets/images/logo.png
-  static const String imagesLogo = "assets/images/logo.png";
+  /// Assets for imagesIshowLogo
+  /// assets/images/Ishow_Logo.png
+  static const String imagesIshowLogo = "assets/images/Ishow_Logo.png";
 
-  /// Assets for imagesLogo2
-  /// assets/images/logo2.png
-  static const String imagesLogo2 = "assets/images/logo2.png";
+  /// Assets for imagesLogout
+  /// assets/images/logout.svg
+  static const String imagesLogout = "assets/images/logout.svg";
 
   /// Assets for imagesMenu
   /// assets/images/menu.svg
@@ -49,6 +89,14 @@ class Assets {
   /// Assets for imagesSearch
   /// assets/images/search.svg
   static const String imagesSearch = "assets/images/search.svg";
+
+  /// Assets for imagesSettings
+  /// assets/images/settings.png
+  static const String imagesSettings = "assets/images/settings.png";
+
+  /// Assets for imagesShare
+  /// assets/images/share.png
+  static const String imagesShare = "assets/images/share.png";
 
   /// Assets for imagesSport1
   /// assets/images/sport_1.png

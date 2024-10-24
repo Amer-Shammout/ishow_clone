@@ -13,6 +13,7 @@ class IshowClone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const HomeView(),
       theme: ThemeData(
         scaffoldBackgroundColor: kPrimaryColor,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom_search_text_field.dart';
 import 'package:ishow_clone/core/utils/app_images.dart';
 
-class DesktopAppBarTrailing extends StatelessWidget {
-  const DesktopAppBarTrailing({super.key});
+class CustomAppBarTrailing extends StatelessWidget {
+  const CustomAppBarTrailing({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +19,20 @@ class DesktopAppBarTrailing extends StatelessWidget {
             Assets.imagesPresons,
           ),
         ),
-        // ignore: prefer_const_constructors
-        SizedBox(
-          width: 8,
-        ),
-        const CustomSearchTextField(),
         IconButton(
+          padding: EdgeInsets.zero,
+          iconSize: 25,
+          onPressed: () {},
+          icon: SvgPicture.asset(
+            width: 25,
+            height: 25,
+            Assets.imagesSearch,
+            color: Colors.white,
+          ),
+        ),
+        IconButton(
+          iconSize: 25,
+          padding: EdgeInsets.zero,
           onPressed: () {},
           icon: SvgPicture.asset(
             width: 25,
@@ -33,6 +42,8 @@ class DesktopAppBarTrailing extends StatelessWidget {
           ),
         ),
         IconButton(
+          iconSize: 25,
+          padding: EdgeInsets.zero,
           onPressed: () {},
           icon: Image.asset(
             width: 25,

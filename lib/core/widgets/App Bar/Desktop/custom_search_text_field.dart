@@ -10,12 +10,11 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 44,
+      height: 42,
       width: 200,
       child: TextField(
         decoration: InputDecoration(
           contentPadding: const EdgeInsets.symmetric(
-            vertical: 0,
             horizontal: 15
           ),
           hintText: "Search",
@@ -25,6 +24,8 @@ class CustomSearchTextField extends StatelessWidget {
           enabledBorder: buildBorder(),
           focusedBorder: buildBorder(),
           suffixIcon: IconButton(
+            padding: EdgeInsets.zero,
+            iconSize: 30,
             onPressed: () {},
             icon: SvgPicture.asset(
               width: 30,

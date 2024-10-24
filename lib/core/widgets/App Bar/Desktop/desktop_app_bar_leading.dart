@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ishow_clone/core/utils/app_images.dart';
+import 'package:ishow_clone/core/utils/functions/open_drawer.dart';
 import 'package:ishow_clone/core/widgets/custom_buttons.dart';
 
-class DesktopAppBarLeading extends StatelessWidget {
+class DesktopAppBarLeading extends StatefulWidget {
   const DesktopAppBarLeading({super.key});
 
   static const List<String> buttons = [
@@ -16,11 +17,18 @@ class DesktopAppBarLeading extends StatelessWidget {
   ];
 
   @override
+  State<DesktopAppBarLeading> createState() => _DesktopAppBarLeadingState();
+}
+
+class _DesktopAppBarLeadingState extends State<DesktopAppBarLeading> {
+  int currentIndex = -1;
+
+  @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: openDrawer,
           icon: SvgPicture.asset(
             color: Colors.white,
             Assets.imagesMenu,
@@ -34,15 +42,23 @@ class DesktopAppBarLeading extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(
+          width: 16,
+        ),
         Row(
           children: List.generate(
-            buttons.length,
+            DesktopAppBarLeading.buttons.length,
             (index) {
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: const EdgeInsets.only(right: 0),
                 child: CustomAppBarButton(
-                  onPressed: () {},
-                  title: buttons[index],
+                  isActive: currentIndex == index,
+                  onPressed: () {
+                    setState(() {
+                      currentIndex = index;
+                    });
+                  },
+                  title: DesktopAppBarLeading.buttons[index],
                 ),
               );
             },
