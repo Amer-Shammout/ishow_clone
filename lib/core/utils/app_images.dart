@@ -34,6 +34,10 @@ class Assets {
   /// assets/images/banner_5.png
   static const String imagesBanner5 = "assets/images/banner_5.png";
 
+  /// Assets for imagesBook
+  /// assets/images/book.png
+  static const String imagesBook = "assets/images/book.png";
+
   /// Assets for imagesCamera
   /// assets/images/camera.png
   static const String imagesCamera = "assets/images/camera.png";
@@ -42,13 +46,33 @@ class Assets {
   /// assets/images/Cartoon.png
   static const String imagesCartoon = "assets/images/Cartoon.png";
 
+  /// Assets for imagesCompititions
+  /// assets/images/compititions.png
+  static const String imagesCompititions = "assets/images/compititions.png";
+
   /// Assets for imagesContent
   /// assets/images/content.png
   static const String imagesContent = "assets/images/content.png";
 
+  /// Assets for imagesConversation
+  /// assets/images/conversation.png
+  static const String imagesConversation = "assets/images/conversation.png";
+
+  /// Assets for imagesCookingPrograms
+  /// assets/images/Cooking_programs.png
+  static const String imagesCookingPrograms = "assets/images/Cooking_programs.png";
+
+  /// Assets for imagesDiverse
+  /// assets/images/diverse.png
+  static const String imagesDiverse = "assets/images/diverse.png";
+
   /// Assets for imagesDrawerLogo
   /// assets/images/drawer_logo.png
   static const String imagesDrawerLogo = "assets/images/drawer_logo.png";
+
+  /// Assets for imagesEntertainment
+  /// assets/images/entertainment.png
+  static const String imagesEntertainment = "assets/images/entertainment.png";
 
   /// Assets for imagesFavourite
   /// assets/images/favourite.png
@@ -57,6 +81,10 @@ class Assets {
   /// Assets for imagesFeedback
   /// assets/images/feedback.png
   static const String imagesFeedback = "assets/images/feedback.png";
+
+  /// Assets for imagesFood
+  /// assets/images/food.png
+  static const String imagesFood = "assets/images/food.png";
 
   /// Assets for imagesForeign
   /// assets/images/Foreign.png
@@ -69,6 +97,10 @@ class Assets {
   /// Assets for imagesGiftProgressIndicatorItem
   /// assets/images/gift_progress_indicator_item.png
   static const String imagesGiftProgressIndicatorItem = "assets/images/gift_progress_indicator_item.png";
+
+  /// Assets for imagesHealth
+  /// assets/images/health.png
+  static const String imagesHealth = "assets/images/health.png";
 
   /// Assets for imagesHistory
   /// assets/images/history.png
@@ -98,9 +130,85 @@ class Assets {
   /// assets/images/menu.svg
   static const String imagesMenu = "assets/images/menu.svg";
 
+  /// Assets for imagesMovie1
+  /// assets/images/movie_1.jpg
+  static const String imagesMovie1 = "assets/images/movie_1.jpg";
+
+  /// Assets for imagesMovie10
+  /// assets/images/movie_10.png
+  static const String imagesMovie10 = "assets/images/movie_10.png";
+
+  /// Assets for imagesMovie11
+  /// assets/images/movie_11.jpg
+  static const String imagesMovie11 = "assets/images/movie_11.jpg";
+
+  /// Assets for imagesMovie12
+  /// assets/images/movie_12.jpg
+  static const String imagesMovie12 = "assets/images/movie_12.jpg";
+
+  /// Assets for imagesMovie13
+  /// assets/images/movie_13.jpg
+  static const String imagesMovie13 = "assets/images/movie_13.jpg";
+
+  /// Assets for imagesMovie14
+  /// assets/images/movie_14.jpg
+  static const String imagesMovie14 = "assets/images/movie_14.jpg";
+
+  /// Assets for imagesMovie15
+  /// assets/images/movie_15.png
+  static const String imagesMovie15 = "assets/images/movie_15.png";
+
+  /// Assets for imagesMovie16
+  /// assets/images/movie_16.png
+  static const String imagesMovie16 = "assets/images/movie_16.png";
+
+  /// Assets for imagesMovie17
+  /// assets/images/movie_17.jpg
+  static const String imagesMovie17 = "assets/images/movie_17.jpg";
+
+  /// Assets for imagesMovie3
+  /// assets/images/movie_3.png
+  static const String imagesMovie3 = "assets/images/movie_3.png";
+
+  /// Assets for imagesMovie4
+  /// assets/images/movie_4.jpg
+  static const String imagesMovie4 = "assets/images/movie_4.jpg";
+
+  /// Assets for imagesMovie5
+  /// assets/images/movie_5.png
+  static const String imagesMovie5 = "assets/images/movie_5.png";
+
+  /// Assets for imagesMovie6
+  /// assets/images/movie_6.jpg
+  static const String imagesMovie6 = "assets/images/movie_6.jpg";
+
+  /// Assets for imagesMovie7
+  /// assets/images/movie_7.jpg
+  static const String imagesMovie7 = "assets/images/movie_7.jpg";
+
+  /// Assets for imagesMovie8
+  /// assets/images/movie_8.jpg
+  static const String imagesMovie8 = "assets/images/movie_8.jpg";
+
+  /// Assets for imagesMovie9
+  /// assets/images/movie_9.jpeg
+  static const String imagesMovie9 = "assets/images/movie_9.jpeg";
+
+  /// Assets for imagesMoview2
+  /// assets/images/moview_2.png
+  static const String imagesMoview2 = "assets/images/moview_2.png";
+
   /// Assets for imagesNotification
   /// assets/images/notification.svg
   static const String imagesNotification = "assets/images/notification.svg";
+
+  /// Assets for imagesPlays
+  /// assets/images/plays.png
+  static const String imagesPlays = "assets/images/plays.png";
+
+  /// Assets for imagesPodcast
+  /// assets/images/podcast.png
+  static const String imagesPodcast = "assets/images/podcast.png";
 
   /// Assets for imagesPresons
   /// assets/images/presons.png
@@ -125,6 +233,10 @@ class Assets {
   /// Assets for imagesShare
   /// assets/images/share.png
   static const String imagesShare = "assets/images/share.png";
+
+  /// Assets for imagesSocial
+  /// assets/images/social.png
+  static const String imagesSocial = "assets/images/social.png";
 
   /// Assets for imagesSport1
   /// assets/images/sport_1.png
@@ -177,6 +289,10 @@ class Assets {
   /// Assets for imagesXtra1
   /// assets/images/xtra_1.png
   static const String imagesXtra1 = "assets/images/xtra_1.png";
+
+  /// Assets for imagesYouTubePrograms 
+  /// assets/images/YouTube_programs .png
+  static const String imagesYouTubePrograms  = "assets/images/YouTube_programs .png";
 
   /// Assets for imagesYoutube
   /// assets/images/Youtube.png

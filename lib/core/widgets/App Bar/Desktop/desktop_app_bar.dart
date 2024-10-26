@@ -32,6 +32,7 @@ class DesktopAppBar extends StatelessWidget {
             ],
           ),
         ),
+        SizedBox(height: 4,),
         const Divider(
           height: 0,
           color: kSecondaryColor,

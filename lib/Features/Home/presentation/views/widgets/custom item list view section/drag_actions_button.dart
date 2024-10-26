@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item%20list%20view%20section/custom_items_list_view.dart';
 import 'package:ishow_clone/core/utils/app_images.dart';
 
 class DragActionsButton extends StatelessWidget {
-  const DragActionsButton({super.key});
+  const DragActionsButton({super.key, required this.scrollController});
+
+  final ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {

@@ -29,12 +29,17 @@ class CustomAppBar extends StatelessWidget {
                   Assets.imagesMenu,
                 ),
               ),
-              Image.asset(
-                Assets.imagesIshowLogo,
-              ),
+              MediaQuery.sizeOf(context).width < 373
+                  ? SizedBox()
+                  : Image.asset(
+                      Assets.imagesIshowLogo,
+                    ),
               const CustomAppBarTrailing(),
             ],
           ),
+        ),
+        const SizedBox(
+          height: 4,
         ),
         const Divider(
           height: 0,

@@ -39,7 +39,7 @@ class _CustomAnimatedItemState extends State<CustomAnimatedItem> {
 
   void itemHoverStart(event) {
     onHover = true;
-    scale = 1.05;
+    scale = 1.08;
     setState(() {});
   }
 }

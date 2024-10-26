@@ -3,42 +3,28 @@ import 'package:ishow_clone/Features/Home/data/models/custom_item_model.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_animated_item.dart';
 import 'package:ishow_clone/constants.dart';
 
-  late ScrollController scrollController ;
-
-
 class CustomItemsListView extends StatefulWidget {
-  const CustomItemsListView({super.key, required this.items});
+  const CustomItemsListView(
+      {super.key, required this.items, required this.scrollController});
 
-  final List<CustomItemModel>items ;
+  final List<CustomItemModel> items;
+  final ScrollController scrollController;
 
   @override
   State<CustomItemsListView> createState() => _CustomItemsListViewState();
 }
 
 class _CustomItemsListViewState extends State<CustomItemsListView> {
-
-
   @override
   void initState() {
-    scrollController = ScrollController();
-    scrollController.addListener(() {
-      setState(() {
-        
-      });
-    },);
+    listenToListViewScroll();
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    scrollController.dispose();
-    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      controller: scrollController,
+      controller: widget.scrollController,
       clipBehavior: Clip.none,
       scrollDirection: Axis.horizontal,
       child: Row(
@@ -47,10 +33,25 @@ class _CustomItemsListViewState extends State<CustomItemsListView> {
             padding: EdgeInsets.only(
                 left: index == 0 ? kHorizontalPadding : 0,
                 right: index == 14 ? kHorizontalPadding : 12),
-            child: CustomAnimatedItem(itemModel: widget.items[index],),
+            child: CustomAnimatedItem(
+              itemModel: widget.items[index],
+            ),
           );
         }),
       ),
+    );
+  }
+
+  void listenToListViewScroll() {
+    widget.scrollController.addListener(
+      () {
+        if (mounted) {
+          // check whether the state object is in tree
+          setState(() {
+            // make changes here
+          });
+        }
+      },
     );
   }
 }

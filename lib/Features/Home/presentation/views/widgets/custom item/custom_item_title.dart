@@ -5,9 +5,11 @@ import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20it
 import 'package:ishow_clone/core/utils/app_images.dart';
 
 class CustomItemTitle extends StatefulWidget {
-  const CustomItemTitle({super.key, required this.title});
+  const CustomItemTitle(
+      {super.key, required this.title, required this.category});
 
   final String title;
+  final String category;
 
   @override
   State<CustomItemTitle> createState() => _CustomItemTitleState();

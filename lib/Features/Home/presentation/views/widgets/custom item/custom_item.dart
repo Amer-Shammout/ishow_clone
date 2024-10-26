@@ -27,9 +27,14 @@ class CustomItem extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(right: 12),
               alignment: Alignment.topLeft,
-              width: getWidth(itemModel.category, MediaQuery.sizeOf(context).width),
-              height:  getHeight(itemModel.category, MediaQuery.sizeOf(context).width),
+              width: getWidth(
+                  itemModel.category, MediaQuery.sizeOf(context).width),
+              height: getHeight(
+                  itemModel.category, MediaQuery.sizeOf(context).width),
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(
+                  12,
+                ),
                 image: DecorationImage(
                   image: AssetImage(
                     itemModel.itemImage,
@@ -39,39 +44,45 @@ class CustomItem extends StatelessWidget {
               ),
               child: onHover
                   ? CustomItemOverlay(
-                    category:itemModel.category,
+                      category: itemModel.category,
                       desc: itemModel.itemDesc,
                     )
                   : null,
             ),
-            CustomItemTitle(title: itemModel.itemTitle),
+            CustomItemTitle(
+              title: itemModel.itemTitle,
+              category: itemModel.category,
+            ),
           ],
         ),
         Positioned(
           left: 8,
           top: 8,
-          child:itemModel.itemState ==null ? SizedBox() :  CustomItemState(itemState: itemModel.itemState!),
+          child: itemModel.itemState == null
+              ? SizedBox()
+              : CustomItemState(itemState: itemModel.itemState!),
         ),
       ],
     );
   }
 }
 
-double getWidth(String category,double screanWidth){
+double getWidth(String category, double screanWidth) {
   double width;
-  if(category == kSeries){
+  if (category == kSeries) {
     width = screanWidth < SizeConfig.tablet ? 146 : 175;
   } else {
-     width = screanWidth < SizeConfig.tablet ? 125 : 130;
+    width = screanWidth < SizeConfig.tablet ? 125 : 130;
   }
   return width;
 }
-double getHeight(String category,double screanWidth){
+
+double getHeight(String category, double screanWidth) {
   double height;
-  if(category == kSeries){
+  if (category == kSeries) {
     height = screanWidth < SizeConfig.tablet ? 117 : 175;
   } else {
-     height = screanWidth < SizeConfig.tablet ? 146 : 175;
+    height = screanWidth < SizeConfig.tablet ? 146 : 175;
   }
   return height;
 }

@@ -8,3 +8,4 @@ const kChannels = 'Channels';
 const kSeries = 'Series';
 const kMovies = 'Movies';
 const kClips = 'Clips';
+const kPrograms = 'Programs';
