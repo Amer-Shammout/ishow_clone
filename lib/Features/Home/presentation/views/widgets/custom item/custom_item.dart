@@ -3,6 +3,8 @@ import 'package:ishow_clone/Features/Home/data/models/custom_item_model.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_item_overlay.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_item_state.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_item_title.dart';
+import 'package:ishow_clone/constants.dart';
+import 'package:ishow_clone/core/utils/size_config.dart';
 
 class CustomItem extends StatelessWidget {
   const CustomItem({
@@ -25,8 +27,8 @@ class CustomItem extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(right: 12),
               alignment: Alignment.topLeft,
-              width: 130,
-              height: 175,
+              width: getWidth(itemModel.category, MediaQuery.sizeOf(context).width),
+              height:  getHeight(itemModel.category, MediaQuery.sizeOf(context).width),
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
@@ -37,6 +39,7 @@ class CustomItem extends StatelessWidget {
               ),
               child: onHover
                   ? CustomItemOverlay(
+                    category:itemModel.category,
                       desc: itemModel.itemDesc,
                     )
                   : null,
@@ -47,9 +50,28 @@ class CustomItem extends StatelessWidget {
         Positioned(
           left: 8,
           top: 8,
-          child: CustomItemState(itemState: itemModel.itemState!),
+          child:itemModel.itemState ==null ? SizedBox() :  CustomItemState(itemState: itemModel.itemState!),
         ),
       ],
     );
   }
+}
+
+double getWidth(String category,double screanWidth){
+  double width;
+  if(category == kSeries){
+    width = screanWidth < SizeConfig.tablet ? 146 : 175;
+  } else {
+     width = screanWidth < SizeConfig.tablet ? 125 : 130;
+  }
+  return width;
+}
+double getHeight(String category,double screanWidth){
+  double height;
+  if(category == kSeries){
+    height = screanWidth < SizeConfig.tablet ? 117 : 175;
+  } else {
+     height = screanWidth < SizeConfig.tablet ? 146 : 175;
+  }
+  return height;
 }

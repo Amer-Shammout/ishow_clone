@@ -2,6 +2,14 @@
 class Assets {
   Assets._();
   
+  /// Assets for imagesAnime
+  /// assets/images/Anime.png
+  static const String imagesAnime = "assets/images/Anime.png";
+
+  /// Assets for imagesArabic
+  /// assets/images/Arabic.png
+  static const String imagesArabic = "assets/images/Arabic.png";
+
   /// Assets for imagesAvatar
   /// assets/images/avatar.png
   static const String imagesAvatar = "assets/images/avatar.png";
@@ -30,6 +38,10 @@ class Assets {
   /// assets/images/camera.png
   static const String imagesCamera = "assets/images/camera.png";
 
+  /// Assets for imagesCartoon
+  /// assets/images/Cartoon.png
+  static const String imagesCartoon = "assets/images/Cartoon.png";
+
   /// Assets for imagesContent
   /// assets/images/content.png
   static const String imagesContent = "assets/images/content.png";
@@ -45,6 +57,10 @@ class Assets {
   /// Assets for imagesFeedback
   /// assets/images/feedback.png
   static const String imagesFeedback = "assets/images/feedback.png";
+
+  /// Assets for imagesForeign
+  /// assets/images/Foreign.png
+  static const String imagesForeign = "assets/images/Foreign.png";
 
   /// Assets for imagesGift
   /// assets/images/gift.png
@@ -97,6 +113,10 @@ class Assets {
   /// Assets for imagesSearch
   /// assets/images/search.svg
   static const String imagesSearch = "assets/images/search.svg";
+
+  /// Assets for imagesSeries2024
+  /// assets/images/series_2024.png
+  static const String imagesSeries2024 = "assets/images/series_2024.png";
 
   /// Assets for imagesSettings
   /// assets/images/settings.png
@@ -157,5 +177,9 @@ class Assets {
   /// Assets for imagesXtra1
   /// assets/images/xtra_1.png
   static const String imagesXtra1 = "assets/images/xtra_1.png";
+
+  /// Assets for imagesYoutube
+  /// assets/images/Youtube.png
+  static const String imagesYoutube = "assets/images/Youtube.png";
 }
 
