@@ -5,12 +5,12 @@ import 'package:ishow_clone/core/utils/app_images.dart';
 const List<CustomItemModel> seriesTypes = [
   CustomItemModel(
     category: kSeries,
-    itemTitle: 'Arabic-عربي',
+    itemTitle: 'Arabic',
     itemImage: Assets.imagesArabic,
   ),
   CustomItemModel(
     category: kSeries,
-    itemTitle: 'Foreign-أجنبي',
+    itemTitle: 'Foreign',
     itemImage: Assets.imagesForeign,
   ),
   CustomItemModel(
@@ -25,12 +25,12 @@ const List<CustomItemModel> seriesTypes = [
   ),
   CustomItemModel(
     category: kSeries,
-    itemTitle: 'مسلسلات يوتيوبية',
+    itemTitle: 'Youtube Series',
     itemImage: Assets.imagesYoutube,
   ),
   CustomItemModel(
     category: kSeries,
-    itemTitle: '2024 Series-مسلسلات 2024',
+    itemTitle: '2024 Series',
     itemImage: Assets.imagesSeries2024,
   ),
 ];

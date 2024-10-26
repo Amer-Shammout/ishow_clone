@@ -11,6 +11,7 @@ class HoveredText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
+      textAlign: TextAlign.center,
         title,
         style: AppStyles.style15Regular(context),
       );

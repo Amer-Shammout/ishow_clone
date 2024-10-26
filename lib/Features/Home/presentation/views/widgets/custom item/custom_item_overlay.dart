@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_item.dart';
-import 'package:ishow_clone/core/utils/size_config.dart';
 
 class CustomItemOverlay extends StatelessWidget {
   const CustomItemOverlay({super.key, this.desc, required this.category});

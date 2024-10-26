@@ -3,7 +3,8 @@ import 'package:ishow_clone/core/utils/app_styles.dart';
 
 class UnHoveredText extends StatelessWidget {
   const UnHoveredText({
-    super.key, required this.title,
+    super.key,
+    required this.title,
   });
 
   final String title;
@@ -11,10 +12,11 @@ class UnHoveredText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-        maxLines: 1,
-        overflow: TextOverflow.ellipsis,
-        title,
-        style: AppStyles.style15Regular(context),
-      );
+      textAlign: TextAlign.center,
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
+      title,
+      style: AppStyles.style15Regular(context),
+    );
   }
 }
