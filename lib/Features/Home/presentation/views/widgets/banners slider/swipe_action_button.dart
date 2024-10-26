@@ -47,18 +47,18 @@ class SwipeActionButton extends StatelessWidget {
   void swipeToPreviousBanner() {
     pageController.previousPage(
       duration: const Duration(
-        milliseconds: 300,
+        milliseconds: 500,
       ),
-      curve: Curves.easeInExpo,
+      curve: Curves.easeInOut,
     );
   }
 
   void swipeToNextBanner() {
     pageController.nextPage(
       duration: const Duration(
-        milliseconds: 300,
+        milliseconds: 500,
       ),
-      curve: Curves.linear,
+      curve: Curves.easeInOut,
     );
   }
 }
