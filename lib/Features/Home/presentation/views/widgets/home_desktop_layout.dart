@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/banners_page_view.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom_animated_item.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom_items_list_view.dart';
 import 'package:ishow_clone/core/widgets/App%20Bar/Desktop/desktop_app_bar.dart';
 
 class HomeDesktopLayout extends StatelessWidget {
@@ -25,7 +25,7 @@ class HomeDesktopLayout extends StatelessWidget {
                 ),
               ),
               SliverToBoxAdapter(
-                child: CustomList(),
+                child: CustomItemsListView(),
               ),
              SliverToBoxAdapter(
                 child: SizedBox(

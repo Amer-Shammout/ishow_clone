@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom_item.dart';
-import 'package:ishow_clone/constants.dart';
 
 class CustomAnimatedItem extends StatefulWidget {
   const CustomAnimatedItem({super.key});
@@ -39,31 +38,5 @@ class _CustomAnimatedItemState extends State<CustomAnimatedItem> {
     onHover = true;
     scale = 1.05;
     setState(() {});
-  }
-}
-
-
-
-
-
-class CustomList extends StatelessWidget {
-  const CustomList({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      clipBehavior: Clip.none,
-      scrollDirection: Axis.horizontal,
-      child: Row(
-        children: List.generate(10, (index) {
-          return Padding(
-            padding: EdgeInsets.only(
-                left: index == 0 ? kHorizontalPadding : 0,
-                right: index == 9 ? kHorizontalPadding : 12),
-            child: const CustomAnimatedItem(),
-          );
-        }),
-      ),
-    );
   }
 }
