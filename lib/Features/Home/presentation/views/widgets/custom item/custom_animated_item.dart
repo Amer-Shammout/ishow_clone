@@ -26,7 +26,7 @@ class _CustomAnimatedItemState extends State<CustomAnimatedItem> {
         curve: Curves.ease,
         duration: const Duration(milliseconds: 300),
         scale: scale,
-        child: CustomItem(onHover: onHover , itemModel : widget.itemModel),
+        child: CustomItem(onHover: onHover, itemModel: widget.itemModel),
       ),
     );
   }

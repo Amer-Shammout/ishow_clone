@@ -27,9 +27,9 @@ class CustomItem extends StatelessWidget {
             Container(
               margin: const EdgeInsets.only(right: 12),
               alignment: Alignment.topLeft,
-              width: getWidth(
+              width: getCustomItemWidth(
                   itemModel.category, MediaQuery.sizeOf(context).width),
-              height: getHeight(
+              height: getCustomItemHeight(
                   itemModel.category, MediaQuery.sizeOf(context).width),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(
@@ -59,7 +59,7 @@ class CustomItem extends StatelessWidget {
           left: 8,
           top: 8,
           child: itemModel.itemState == null
-              ? SizedBox()
+              ? const SizedBox()
               : CustomItemState(itemState: itemModel.itemState!),
         ),
       ],
@@ -67,7 +67,7 @@ class CustomItem extends StatelessWidget {
   }
 }
 
-double getWidth(String category, double screanWidth) {
+double getCustomItemWidth(String category, double screanWidth) {
   double width;
   if (category == kSeries) {
     width = screanWidth < SizeConfig.tablet ? 146 : 175;
@@ -77,7 +77,7 @@ double getWidth(String category, double screanWidth) {
   return width;
 }
 
-double getHeight(String category, double screanWidth) {
+double getCustomItemHeight(String category, double screanWidth) {
   double height;
   if (category == kSeries) {
     height = screanWidth < SizeConfig.tablet ? 117 : 175;

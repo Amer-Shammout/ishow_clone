@@ -12,7 +12,7 @@ class BannerPageViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: getHeight(context),
+      height: getBannerHeight(context),
       width: MediaQuery.sizeOf(context).width,
       decoration: BoxDecoration(
           image: DecorationImage(
@@ -24,7 +24,7 @@ class BannerPageViewItem extends StatelessWidget {
     );
   }
 
-  double getHeight(BuildContext context) {
+  double getBannerHeight(BuildContext context) {
     return MediaQuery.sizeOf(context).width > SizeConfig.tablet
         ? MediaQuery.sizeOf(context).height * .65
         : MediaQuery.sizeOf(context).height * .3;

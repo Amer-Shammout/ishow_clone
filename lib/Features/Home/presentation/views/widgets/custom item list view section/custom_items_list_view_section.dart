@@ -6,13 +6,15 @@ import 'package:ishow_clone/constants.dart';
 import 'package:ishow_clone/core/utils/app_styles.dart';
 
 class CustomItemsListViewSection extends StatelessWidget {
-  const CustomItemsListViewSection({super.key, required this.title, required this.items, required this.scrollController});
+  const CustomItemsListViewSection(
+      {super.key,
+      required this.title,
+      required this.items,
+      required this.scrollController});
 
   final String title;
-    final List<CustomItemModel>items ;
-     final ScrollController scrollController  ;
-
-
+  final List<CustomItemModel> items;
+  final ScrollController scrollController;
 
   @override
   Widget build(BuildContext context) {
@@ -30,14 +32,19 @@ class CustomItemsListViewSection extends StatelessWidget {
                 title,
                 style: AppStyles.style28Medium(context),
               ),
-               DragActionsButton(scrollController: scrollController,)
+              DragActionsButton(
+                scrollController: scrollController,
+              )
             ],
           ),
         ),
         const SizedBox(
           height: 16,
         ),
-         CustomItemsListView(items: items,scrollController: scrollController,),
+        CustomItemsListView(
+          items: items,
+          scrollController: scrollController,
+        ),
       ],
     );
   }

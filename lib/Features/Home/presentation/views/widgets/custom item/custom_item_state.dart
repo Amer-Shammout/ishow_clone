@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomItemState extends StatelessWidget {
   const CustomItemState({
-    super.key, required this.itemState,
+    super.key,
+    required this.itemState,
   });
 
   final String itemState;

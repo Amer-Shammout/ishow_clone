@@ -7,7 +7,7 @@ import 'package:ishow_clone/Features/Home/presentation/views/widgets/home_tablet
 import 'package:ishow_clone/core/widgets/Drawer/Other%20Platforms/custom_drawer.dart';
 import 'package:ishow_clone/core/widgets/adaptive_layout.dart';
 
-final GlobalKey<ScaffoldState>scaffoldKey = GlobalKey();
+final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -15,13 +15,19 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key:scaffoldKey ,
-      drawer: MediaQuery.sizeOf(context).width > SizeConfig.desktop ?  const DesktopCustomDrawer() : CustomDrawer(),
+      key: scaffoldKey,
+      drawer: desktopOrOtherPlatformsDrawer(context),
       body: AdaptiveLayout(
         mobileLayout: (context) => const HomeMobileLayout(),
         tabletLayout: (context) => const HomeTabletLayout(),
         desktopLayout: (context) => const HomeDesktopLayout(),
       ),
     );
+  }
+
+  StatelessWidget desktopOrOtherPlatformsDrawer(BuildContext context) {
+    return MediaQuery.sizeOf(context).width > SizeConfig.desktop
+        ? const DesktopCustomDrawer()
+        : const CustomDrawer();
   }
 }

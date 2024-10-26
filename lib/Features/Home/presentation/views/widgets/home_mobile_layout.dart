@@ -13,7 +13,7 @@ class HomeMobileLayout extends StatelessWidget {
         Expanded(
           child: CustomScrollView(
             slivers: [
-            HomeViewBody(),
+              HomeViewBody(),
             ],
           ),
         ),

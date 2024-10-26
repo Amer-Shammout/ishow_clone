@@ -19,12 +19,7 @@ class SwipeActionButton extends StatelessWidget {
         children: [
           IconButton(
             onPressed: () {
-              pageController.previousPage(
-                duration: const Duration(
-                  milliseconds: 300,
-                ),
-                curve: Curves.easeInExpo,
-              );
+              swipeToPreviousBanner();
             },
             icon: SvgPicture.asset(
               color: Colors.white.withOpacity(.9),
@@ -35,12 +30,7 @@ class SwipeActionButton extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              pageController.nextPage(
-                duration: const Duration(
-                  milliseconds: 300,
-                ),
-                curve: Curves.linear,
-              );
+              swipeToNextBanner();
             },
             icon: SvgPicture.asset(
               color: Colors.white.withOpacity(.9),
@@ -51,6 +41,24 @@ class SwipeActionButton extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  void swipeToPreviousBanner() {
+    pageController.previousPage(
+      duration: const Duration(
+        milliseconds: 300,
+      ),
+      curve: Curves.easeInExpo,
+    );
+  }
+
+  void swipeToNextBanner() {
+    pageController.nextPage(
+      duration: const Duration(
+        milliseconds: 300,
+      ),
+      curve: Curves.linear,
     );
   }
 }

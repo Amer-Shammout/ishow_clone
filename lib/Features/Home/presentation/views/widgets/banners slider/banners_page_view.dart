@@ -25,12 +25,7 @@ class _BannersPageViewState extends State<BannersPageView> {
   late PageController _pageController;
   @override
   void initState() {
-    _pageController = PageController();
-
-    _pageController.addListener(() {
-      setState(() {});
-    });
-
+    initializeAndListenToPageController();
     super.initState();
   }
 
@@ -60,5 +55,12 @@ class _BannersPageViewState extends State<BannersPageView> {
         ),
       ],
     );
+  }
+
+  void initializeAndListenToPageController() {
+    _pageController = PageController();
+    _pageController.addListener(() {
+      setState(() {});
+    });
   }
 }

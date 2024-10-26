@@ -13,8 +13,14 @@ class CustomItemOverlay extends StatelessWidget {
     return Container(
       alignment: Alignment.topCenter,
       padding: const EdgeInsets.all(16),
-      width: getWidth(category, MediaQuery.sizeOf(context).width),
-      height: getHeight(category, MediaQuery.sizeOf(context).width),
+      width: getCustomItemWidth(
+        category,
+        MediaQuery.sizeOf(context).width,
+      ),
+      height: getCustomItemHeight(
+        category,
+        MediaQuery.sizeOf(context).width,
+      ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(
           12,
