@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom_item_overlay.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom_item_state.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom_item_title.dart';
-import 'package:ishow_clone/core/utils/app_images.dart';
+import 'package:ishow_clone/Features/Home/data/models/custom_item_model.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_item_overlay.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_item_state.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/custom_item_title.dart';
 
 class CustomItem extends StatelessWidget {
   const CustomItem({
     super.key,
     required this.onHover,
+    required this.itemModel,
   });
+
+  final CustomItemModel itemModel;
 
   final bool onHover;
 
@@ -24,25 +27,27 @@ class CustomItem extends StatelessWidget {
               alignment: Alignment.topLeft,
               width: 130,
               height: 175,
-              decoration: const BoxDecoration(
+              decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(
-                    Assets.imagesSport1,
+                    itemModel.itemImage,
                   ),
                   fit: BoxFit.fill,
                 ),
               ),
               child: onHover
-                  ? const CustomItemOverlay()
+                  ? CustomItemOverlay(
+                      desc: itemModel.itemDesc,
+                    )
                   : null,
             ),
-            const CustomItemTitle(),
+            CustomItemTitle(title: itemModel.itemTitle),
           ],
         ),
-        const Positioned(
+        Positioned(
           left: 8,
           top: 8,
-          child: CustomItemState(),
+          child: CustomItemState(itemState: itemModel.itemState!),
         ),
       ],
     );

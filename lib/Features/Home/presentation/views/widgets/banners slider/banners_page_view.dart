@@ -1,7 +1,7 @@
 import 'package:expandable_page_view/expandable_page_view.dart';
 import 'package:flutter/material.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/banners_page_view_item.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/swipe_action_button.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/banners%20slider/banners_page_view_item.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/banners%20slider/swipe_action_button.dart';
 import 'package:ishow_clone/core/utils/app_images.dart';
 
 class BannersPageView extends StatefulWidget {
@@ -22,16 +22,22 @@ class _BannersPageViewState extends State<BannersPageView> {
     Assets.imagesBanner5,
   ];
 
-  late PageController pageController;
+  late PageController _pageController;
   @override
   void initState() {
-    pageController = PageController();
+    _pageController = PageController();
 
-    pageController.addListener(() {
+    _pageController.addListener(() {
       setState(() {});
     });
 
     super.initState();
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
   }
 
   @override
@@ -40,7 +46,7 @@ class _BannersPageViewState extends State<BannersPageView> {
       alignment: Alignment.center,
       children: [
         ExpandablePageView.builder(
-          controller: pageController,
+          controller: _pageController,
           scrollDirection: Axis.horizontal,
           itemCount: images.length,
           itemBuilder: (context, index) {
@@ -50,7 +56,7 @@ class _BannersPageViewState extends State<BannersPageView> {
           },
         ),
         SwipeActionButton(
-          pageController: pageController,
+          pageController: _pageController,
         ),
       ],
     );

@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:ishow_clone/core/utils/app_styles.dart';
 
-class HoveredText extends StatelessWidget {
-  const HoveredText({
-    super.key,
+class UnHoveredText extends StatelessWidget {
+  const UnHoveredText({
+    super.key, required this.title,
   });
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-        "Sport 1 ssssssssssssssssssssss",
+        maxLines: 1,
+        overflow: TextOverflow.ellipsis,
+        title,
         style: AppStyles.style15Regular(context),
       );
   }

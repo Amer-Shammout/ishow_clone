@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class CustomItemOverlay extends StatelessWidget {
-  const CustomItemOverlay({super.key});
+  const CustomItemOverlay({super.key, this.desc});
+
+  final String? desc;
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +21,9 @@ class CustomItemOverlay extends StatelessWidget {
         ),
       ),
       child: Text(
-          textAlign: TextAlign.center,
-          "قناة رياضية تبث مباريات الدوري الإسباني.A sports channel t"),
+        textAlign: TextAlign.center,
+        desc ?? '',
+      ),
     );
   }
 }

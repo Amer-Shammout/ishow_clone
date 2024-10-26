@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/hovered_text.dart';
-import 'package:ishow_clone/Features/Home/presentation/views/widgets/un_hovered_text.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/hovered_text.dart';
+import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item/un_hovered_text.dart';
 import 'package:ishow_clone/core/utils/app_images.dart';
 
 class CustomItemTitle extends StatefulWidget {
-  const CustomItemTitle({super.key});
+  const CustomItemTitle({super.key, required this.title});
+
+  final String title;
 
   @override
   State<CustomItemTitle> createState() => _CustomItemTitleState();
@@ -33,7 +35,9 @@ class _CustomItemTitleState extends State<CustomItemTitle> {
           child: MouseRegion(
             onEnter: textHoverStart,
             onExit: textHoverEnd,
-            child: onTextHover ? const HoveredText() : const UnHoveredText(),
+            child: onTextHover
+                ? HoveredText(title: widget.title)
+                : UnHoveredText(title: widget.title),
           ),
         ),
       ],
