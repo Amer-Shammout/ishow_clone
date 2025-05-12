@@ -6,6 +6,7 @@ import 'package:ishow_clone/Features/Home/data/programs_data.dart';
 import 'package:ishow_clone/Features/Home/data/series_data.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/banners%20slider/banners_page_view.dart';
 import 'package:ishow_clone/Features/Home/presentation/views/widgets/custom%20item%20list%20view%20section/custom_items_list_view_section.dart';
+import 'package:ishow_clone/core/utils/app_styles.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -25,7 +26,7 @@ class HomeViewBody extends StatelessWidget {
             items: channels,
           ),
           const SizedBox(
-            height: 16,
+            height: 32,
           ),
           CustomItemsListViewSection(
             scrollController: ScrollController(),
@@ -33,7 +34,7 @@ class HomeViewBody extends StatelessWidget {
             items: seriesTypes,
           ),
           const SizedBox(
-            height: 16,
+            height: 32,
           ),
           CustomItemsListViewSection(
             scrollController: ScrollController(),
@@ -41,7 +42,7 @@ class HomeViewBody extends StatelessWidget {
             items: movies,
           ),
           const SizedBox(
-            height: 16,
+            height: 32,
           ),
           CustomItemsListViewSection(
             scrollController: ScrollController(),
@@ -49,7 +50,7 @@ class HomeViewBody extends StatelessWidget {
             items: clipsTypes,
           ),
           const SizedBox(
-            height: 16,
+            height: 32,
           ),
           CustomItemsListViewSection(
             scrollController: ScrollController(),
@@ -58,6 +59,14 @@ class HomeViewBody extends StatelessWidget {
           ),
           const SizedBox(
             height: 80,
+          ),
+          Center(
+            child: Text(
+              'Clone For Ishow Home Page | 2024',
+              style: AppStyles.style14Regular(context).copyWith(
+                fontSize: 10,
+              ),
+            ),
           ),
         ],
       ),

@@ -17,7 +17,8 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       key: scaffoldKey,
       drawer: desktopOrOtherPlatformsDrawer(context),
-      body: AdaptiveLayout(
+      body: 
+      AdaptiveLayout(
         mobileLayout: (context) => const HomeMobileLayout(),
         tabletLayout: (context) => const HomeTabletLayout(),
         desktopLayout: (context) => const HomeDesktopLayout(),

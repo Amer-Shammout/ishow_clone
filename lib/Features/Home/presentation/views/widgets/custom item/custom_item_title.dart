@@ -21,7 +21,7 @@ class _CustomItemTitleState extends State<CustomItemTitle> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         SvgPicture.asset(
           Assets.imagesStar,

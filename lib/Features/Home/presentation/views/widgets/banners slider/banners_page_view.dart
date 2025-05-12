@@ -28,8 +28,6 @@ class _BannersPageViewState extends State<BannersPageView> {
 
   late PageController _pageController;
 
-  
-
   @override
   void initState() {
     initializeAndListenToPageController();
@@ -67,9 +65,16 @@ class _BannersPageViewState extends State<BannersPageView> {
 
   void initializeAndListenToPageController() {
     _pageController = PageController();
-    _pageController.addListener(() {
-      setState(() {});
-    });
+    _pageController.addListener(
+      () {
+        if (mounted) {
+          // check whether the state object is in tree
+          setState(() {
+            // make changes here
+          });
+        }
+      },
+    );
   }
 
   void _startTimer() {
