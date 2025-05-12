@@ -122,6 +122,10 @@ class Assets {
   /// assets/images/left_arrow.svg
   static const String imagesLeftArrow = "assets/images/left_arrow.svg";
 
+  /// Assets for imagesLogo animation
+  /// assets/images/Logo animation.json
+  static const String imagesLogoAnimation = "assets/images/Logo animation.json";
+
   /// Assets for imagesLogout
   /// assets/images/logout.svg
   static const String imagesLogout = "assets/images/logout.svg";
@@ -213,6 +217,10 @@ class Assets {
   /// Assets for imagesPresons
   /// assets/images/presons.png
   static const String imagesPresons = "assets/images/presons.png";
+
+  /// Assets for imagesProduct1
+  /// assets/images/product1.webp
+  static const String imagesProduct1 = "assets/images/product1.webp";
 
   /// Assets for imagesRightArrow
   /// assets/images/right_arrow.svg
